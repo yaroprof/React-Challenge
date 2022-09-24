@@ -7,12 +7,10 @@ function App() {
     const data = { [name]: value };
     setObjData({ ...objData, ...data });
   };
-
   const submit = (event) => {
     event.preventDefault();
     console.log(objData);
   };
-
   return (
     <form onSubmit={submit}>
       <div className="form">
@@ -22,28 +20,24 @@ function App() {
           type="text"
           onChange={(event) => getInputs(event.target.value, event.target.name)}
         />
-
         <input
           placeholder="Write your age"
           name="age"
           type="number"
           onChange={(event) => getInputs(event.target.value, event.target.name)}
         />
-
         <input
           placeholder="Write your hobbies"
-          name="date"
+          name="text"
           type="text"
           onChange={(event) => getInputs(event.target.value, event.target.name)}
         />
-
         <input
           placeholder="Write a Date"
           name="date"
           type="date"
           onChange={(event) => getInputs(event.target.value, event.target.name)}
         />
-
         <input
           placeholder="Input date"
           name="date"
